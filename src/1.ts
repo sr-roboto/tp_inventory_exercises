@@ -1,6 +1,6 @@
-class Inventario {
+export class Inventario {
   private static instancia: Inventario;
-  private equipos: [{ nombre: string; tipo: string; estado: string }];
+  private equipos: { nombre: string; tipo: string; estado: string }[] = [];
   constructor() {}
 
   public static obtenerInstancia(): Inventario {
@@ -23,4 +23,3 @@ const inventario = Inventario.obtenerInstancia();
 inventario.agregarEquipo('Notebook HP', 'Portátil', 'disponible');
 console.log(inventario.listarEquipos());
 // [{ nombre: "Notebook HP", tipo: "Portátil", estado: "disponible" }]
-// Tipo: Notebook, Nombre: Dell XPS, RAM: 16GB, Procesador: i7
